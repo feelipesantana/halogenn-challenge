@@ -1,0 +1,58 @@
+.headerContainer{
+  height:52.4rem;
+  background: #313352;
+  color:white;
+  position: relative;
+  .layoutDots{
+    position: absolute;
+    right: -10rem;
+    width:311px;
+    height:343px;
+  }
+  .headerBase{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    
+    .menuContainer{
+      display:flex ;
+      align-items: center;
+      justify-content: center;
+      gap:6.52rem;
+      .menu{
+         display: flex;
+         align-items: center;
+         justify-content: center;
+
+         gap:4.5rem;
+         a{
+          transition:color .2s ease;
+         }
+         a:hover{
+            color: var(--orange-default);
+         }
+      }
+    }
+    button{
+      padding: 1.2rem 1.8rem;
+      background-color: rgba(255, 255, 255, 0.09);
+      display:flex;
+      gap:0.5rem;
+      align-items: center;
+      justify-content: center;
+      border-radius: 7px;
+
+      transition:filter .2s ease;
+
+      &:hover{
+        filter: brightness(0.7);
+      }
+    }
+  }
+}
+
+
+
+
+
+
