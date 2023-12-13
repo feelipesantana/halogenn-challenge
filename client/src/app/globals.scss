@@ -14,8 +14,9 @@
 
 :root{
   font-size:62.5%;
-  --blue-default:#313352;
+  --blue-default:rgba(50, 51, 81, 1);
   --white:#ffffff;
+  --longing: rgba(249, 240, 238, 1);
   --orange-default: rgba(245, 100, 61, 1);
 }
 
@@ -36,6 +37,8 @@
 body{
   font-size:1.6rem;
   font: 400;
+  height:100vh;
+  width:100%;
 }
 
 button{
@@ -53,4 +56,6 @@ a{
   height:100%;
   margin: 0 auto;
   padding: 5.8rem 0;
+  border:1px solid blue;
+  
 }

@@ -26,16 +26,19 @@ export function Header() {
                 <Link href="/">Início</Link>
               </li>
               <li>
-                <Link href="/">Laudo</Link>
+                <Link href="/">Produtos</Link>
+              </li>
+              <li>
+                <Link href="/">Laudos</Link>
+              </li>
+              <li>
+                <Link href="/">Sobre nós</Link>
               </li>
               <li>
                 <Link href="/">Certificações</Link>
               </li>
               <li>
                 <Link href="/">Contato</Link>
-              </li>
-              <li>
-                <Link href="/">Produtos</Link>
               </li>
             </ul>
           </div>
