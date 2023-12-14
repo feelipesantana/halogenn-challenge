@@ -1,14 +1,20 @@
-import Fastify from "fastify";
-import { appRoutes } from "./http/routes";
+import express from 'express'
+import {appRoutes} from "./http/routes";
+import cors from 'cors'
+import path from 'path'
 
 
-const app = Fastify()
+const app = express()
 
-app.register(appRoutes)
+app.use(cors({
+  origin: 'http://127.0.0.1:3000',
+  methods: ['GET', 'PUT', 'POST', 'DELETE'] 
+}))
+app.use('/', appRoutes);
+app.use('/images', express.static(__dirname + '/images'));
 
-app.listen({
-  host: "0.0.0.0",
-  port: 3333
-}).then(() => {
-  console.log("🚀 Server is Running on Port: 3333")
+
+app.listen(3333, () =>{
+  console.log('Servidor rodando na porta 3333');
+
 })

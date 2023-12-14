@@ -1,8 +1,8 @@
-import { FastifyReply, FastifyRequest } from "fastify";
 
 import z from 'zod'
 import { getAllProductsFactory } from "../../use-cases/factory/ProductFactory";
-export async function GetProductsController(request: FastifyRequest, reply: FastifyReply){
+import { Request, Response } from 'express';
+export async function GetProductsController(request: Request, reply: Response){
   try{
     const productFactory = getAllProductsFactory();
 

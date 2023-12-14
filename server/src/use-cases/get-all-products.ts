@@ -1,4 +1,4 @@
-import { Products } from "@prisma/client";
+import { Product } from "@prisma/client";
 import { ProductRepository } from "../repositories/ProductRepository";
 
 interface GetAllProductsRequest{
@@ -6,8 +6,9 @@ interface GetAllProductsRequest{
   description:string
   price: number
   rating:number 
+  image:string
 }
-type GetAllProductsResponse = Products
+type GetAllProductsResponse = Product
 export class GetAllProducts{
 
   constructor(private productRepository: ProductRepository){}

@@ -1,22 +1,23 @@
-import { Prisma, Products } from "@prisma/client";
+import { Prisma, Product } from "@prisma/client";
 import { ProductRepository } from "../ProductRepository";
 import { prisma } from "../../services/prisma";
 
 export class PrismaProductRepository implements ProductRepository{
-  async create(data: Prisma.ProductsCreateInput): Promise<Products> {
-    const createProduct = await prisma.products.create({
+  async create(data: Prisma.ProductCreateInput): Promise<Product> {
+    const createProduct = await prisma.product.create({
       data:{
         name:data.name,
         description:data.description,
         price:data.price,
-        rating:data.rating
+        rate:data.rate,
+        image: data.image
       }
     })
 
     return createProduct;
   } 
-  async findAll(): Promise<Products[] | null> {
-    const findProducts = await  prisma.products.findMany()
-    return findProducts
+  async findAll(): Promise<Product[] | null> {
+    const findProduct = await  prisma.product.findMany()
+    return findProduct
   }
 }
