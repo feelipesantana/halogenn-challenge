@@ -4,6 +4,7 @@ import "./globals.scss";
 
 import Image from "next/image";
 import { Header } from "@/components/Header";
+import { AppProvider } from "@/providers";
 
 const dmSans = DM_Sans({ subsets: ["latin"] });
 
@@ -20,8 +21,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={dmSans.className}>
-        <Header />
-        <main>{children}</main>
+        <AppProvider>
+          <Header />
+          <main>{children}</main>
+        </AppProvider>
       </body>
     </html>
   );
