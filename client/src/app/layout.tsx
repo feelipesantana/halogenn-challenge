@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={dmSans.className}>
         <Header />
-        {children}
+        <main>{children}</main>
       </body>
     </html>
   );

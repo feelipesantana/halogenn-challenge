@@ -1,10 +1,10 @@
 .headerContainer{
   height:52.4rem;
+  padding:5.8rem 0;
   background: #313352;
   color:white;
   position: relative;
-  overflow-x: hidden
-  ;
+  overflow-x: hidden;
   .layoutDots{
     position: absolute;
     right: -10rem;
@@ -48,6 +48,22 @@
 
       &:hover{
         filter: brightness(0.7);
+      }
+    }
+  }
+
+  @media(max-width:728px){
+
+    .layoutDots{
+      top:20rem;
+      left: -50%;
+      right: -50%;
+    }
+    .headerBase{
+      .menuContainer{
+        .menu{
+          display:none;
+        }
       }
     }
   }
