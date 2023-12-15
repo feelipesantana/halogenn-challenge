@@ -10,7 +10,7 @@ export function Product({ data }: ProductsProps) {
     <section className={styles.product}>
       <div className={styles.imgProduct}>
         <Image
-          src={`http://127.0.0.1:3333` + data.image}
+          src={process.env.NEXT_PUBLIC_API_URL + data.image}
           width={500}
           height={500}
           alt="Imagem Produto"
