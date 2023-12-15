@@ -2,6 +2,7 @@ import express from 'express'
 import {appRoutes} from "./http/routes";
 import cors from 'cors'
 import path from 'path'
+import bodyParser from 'body-parser';
 
 
 const app = express()
@@ -11,6 +12,7 @@ app.use(cors({
   methods: ['GET', 'PUT', 'POST', 'DELETE'] 
 }))
 
+app.use(bodyParser.json());
 app.use('/', appRoutes);
 app.use('/images', express.static(__dirname + '/images'));
 
