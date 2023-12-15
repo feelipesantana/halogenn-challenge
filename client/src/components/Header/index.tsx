@@ -22,12 +22,14 @@ export function Header() {
       <div className="baseContainer">
         <div className={styles.headerBase}>
           <div className={styles.menuContainer}>
-            <Image
-              src="/assets/logo.svg"
-              width={160}
-              height={35}
-              alt="Halogenn"
-            />
+            <div className="min-h-[2.4rem] min-w-[12rem] ">
+              <Image
+                src="/assets/logo.svg"
+                width={160}
+                height={35}
+                alt="Halogenn"
+              />
+            </div>
             <ul className={styles.menu}>
               <li>
                 <Link href="/">Início</Link>
@@ -51,22 +53,25 @@ export function Header() {
           </div>
           <div className={styles.buttonsHeader}>
             <button>
-              <Image
-                src="/assets/icons/list.svg"
-                width={21}
-                height={21}
-                alt="Orçamento"
-              />
-
+              <div className="min-h-[2.1rem] min-w-[2.1rem] ">
+                <Image
+                  src="/assets/icons/list.svg"
+                  width={21}
+                  height={21}
+                  alt="Orçamento"
+                />
+              </div>
               <span>Orçamento</span>
             </button>
             <button className={styles.menuHamburger}>
-              <Image
-                src="/assets/icons/icon-menu-mobile.svg"
-                width={28}
-                height={28}
-                alt="Orçamento"
-              />
+              <div className="min-h-[2.1rem] min-w-[2.1rem] ">
+                <Image
+                  src="/assets/icons/icon-menu-mobile.svg"
+                  width={28}
+                  height={28}
+                  alt="Orçamento"
+                />
+              </div>
             </button>
           </div>
         </div>
@@ -78,25 +83,6 @@ export function Header() {
             Estamos preparados para te entender e atender da melhor forma para
             suprir todas as suas demandas em químicos e similares.
           </p>
-        </div>
-      </div>
-
-      <div className={styles.departmentContainer}>
-        <div className={styles.departmentContent}>
-          <Department
-            title={blockData.firstBlock.title}
-            description={blockData.firstBlock.description}
-            image={blockData.firstBlock.image}
-          />
-          <Department
-            title={blockData.secondBlock.title}
-            description={blockData.secondBlock.description}
-            image={blockData.secondBlock.image}
-          />
-          <Department
-            title={blockData.thirdBlock.title}
-            description={blockData.thirdBlock.description}
-          />
         </div>
       </div>
     </header>

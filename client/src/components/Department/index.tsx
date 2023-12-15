@@ -25,7 +25,7 @@ export function Department({ title, image, description }: DepartmentProps) {
               />
             )}
 
-            {title !== "LABORATÓRIOS" && (
+            <div className="min-h-[2.4rem] min-w-[2.4rem]">
               <Image
                 src={`/assets/icons/${image}.svg`}
                 width={23}
@@ -33,7 +33,7 @@ export function Department({ title, image, description }: DepartmentProps) {
                 alt="Icon"
                 className={styles.imgIcon}
               />
-            )}
+            </div>
           </div>
           <span>{description}</span>
         </div>
@@ -42,7 +42,7 @@ export function Department({ title, image, description }: DepartmentProps) {
           src="/assets/dots.svg"
           width={100}
           height={69}
-          alt="Orçamento"
+          alt="Pontilhados"
         />
       </div>
     </div>

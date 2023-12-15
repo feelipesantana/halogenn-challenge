@@ -28,7 +28,7 @@ const initialState: inicialStateProps = {
   thirdBlock:{
     title: "LABORATÓRIOS",
     description: "Ferramentas e utensílios",
-    
+    image: "tools"
   }
 }
 

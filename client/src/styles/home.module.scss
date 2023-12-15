@@ -4,13 +4,17 @@
    width:100%;
    padding: 0 4rem;
   .departmentContainer{
-    position: relative;
-
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
     .departmentContent{
+      max-width:1360px;
+     
       width:100%;
       position:absolute;
       display:flex;
-      top:-68rem;
+      top:20rem;
     }
     
   }
@@ -31,20 +35,22 @@
     }
   }
 
-  @media(max-width:728px){
+  @media(max-width:768px){
     width:100%;
     margin: 0 auto;
    
+    
     .departmentContainer{
+      margin:2.4rem auto;
       .departmentContent{
         position:static;
+        z-index: 1;
         width:100%;
         display:flex;
         flex-direction: column;
       }
       
     }
-
     .productsContainer{
       margin:3.1rem 0 6.5rem 0;
 

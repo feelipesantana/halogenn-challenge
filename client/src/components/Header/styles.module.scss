@@ -3,7 +3,6 @@
   padding:5.8rem 4rem;
   background: #313352;
   color:white;
-  
   .layoutDots{
     position: absolute;
     right: -10rem;
@@ -54,21 +53,24 @@
       display:none;
     }
   }
-  
   .about{
     display:none;
   }
-
-  @media(max-width:728px){
-    height:83rem;
   
+  
+  @media(max-width:768px){
+    height:83rem;
+    position:relative;
+
     .layoutDots{
-      
+      width:100%;
       top:60rem;
-      left: 8%;
+      left: 0 ;
       right: -50%;
+      z-index: 0;
     }
     .headerBase{
+      gap:9rem;
       .menuContainer{
         .menu{
           display:none;
@@ -110,23 +112,10 @@
         line-height: 2.523rem;
       }
     }
-  }
-
-  .departmentContainer{
-    width:100%;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    .departmentContent{
-      max-width:1360px;
-     
-      width:100%;
-      position:absolute;
-      display:flex;
-      top:20rem;
-    }
     
   }
+
+ 
 }
 
 

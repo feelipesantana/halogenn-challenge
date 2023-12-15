@@ -29,6 +29,25 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
+      <div className={styles.departmentContainer}>
+        <div className={styles.departmentContent}>
+          <Department
+            title={blockData.firstBlock.title}
+            description={blockData.firstBlock.description}
+            image={blockData.firstBlock.image}
+          />
+          <Department
+            title={blockData.secondBlock.title}
+            description={blockData.secondBlock.description}
+            image={blockData.secondBlock.image}
+          />
+          <Department
+            title={blockData.thirdBlock.title}
+            description={blockData.thirdBlock.description}
+            image={blockData.thirdBlock.image}
+          />
+        </div>
+      </div>
       <div className="baseContainer">
         <div className={styles.productsContainer}>
           <h2>PRODUTOS</h2>
