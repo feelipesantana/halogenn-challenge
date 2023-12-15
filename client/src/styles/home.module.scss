@@ -2,6 +2,7 @@
   
    height:100%;
    width:100%;
+   padding: 0 4rem;
   .departmentContainer{
     position: relative;
 
@@ -16,7 +17,6 @@
 
   .productsContainer{
     margin:35rem 0 6.5rem 0;
-    
     h2{
       font-size:2.4rem;
       line-height: 2.4rem;
@@ -46,7 +46,8 @@
     }
 
     .productsContainer{
-     
+      margin:3.1rem 0 6.5rem 0;
+
 
       .productsContent{
         display:flex;

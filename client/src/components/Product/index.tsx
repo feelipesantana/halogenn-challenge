@@ -6,7 +6,6 @@ interface ProductsProps {
   data: FetchProductsType;
 }
 export function Product({ data }: ProductsProps) {
-  console.log(data);
   return (
     <section className={styles.product}>
       <div className={styles.imgProduct}>

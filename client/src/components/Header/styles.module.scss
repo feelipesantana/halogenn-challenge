@@ -1,13 +1,13 @@
 .headerContainer{
   height:52.4rem;
-  padding:5.8rem 0;
+  padding:5.8rem 4rem;
   background: #313352;
   color:white;
   
-  overflow-x: hidden;
   .layoutDots{
     position: absolute;
     right: -10rem;
+    top:0;
     width:311px;
     height:343px;
   }
@@ -15,7 +15,7 @@
     width:100%;
     display: flex;
     justify-content: space-between;
-    
+
     .menuContainer{
       display:flex ;
       align-items: center;
@@ -110,6 +110,22 @@
         line-height: 2.523rem;
       }
     }
+  }
+
+  .departmentContainer{
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    .departmentContent{
+      max-width:1360px;
+     
+      width:100%;
+      position:absolute;
+      display:flex;
+      top:20rem;
+    }
+    
   }
 }
 

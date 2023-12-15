@@ -1,8 +1,15 @@
+"use client";
+
 import Image from "next/image";
 import styles from "./styles.module.scss";
 import Link from "next/link";
+import { Department } from "../Department";
+import { useSelector } from "react-redux";
+import { RootState } from "@/store";
 
 export function Header() {
+  const blockData = useSelector((state: RootState) => state.department);
+
   return (
     <header className={styles.headerContainer}>
       <Image
@@ -71,6 +78,25 @@ export function Header() {
             Estamos preparados para te entender e atender da melhor forma para
             suprir todas as suas demandas em químicos e similares.
           </p>
+        </div>
+      </div>
+
+      <div className={styles.departmentContainer}>
+        <div className={styles.departmentContent}>
+          <Department
+            title={blockData.firstBlock.title}
+            description={blockData.firstBlock.description}
+            image={blockData.firstBlock.image}
+          />
+          <Department
+            title={blockData.secondBlock.title}
+            description={blockData.secondBlock.description}
+            image={blockData.secondBlock.image}
+          />
+          <Department
+            title={blockData.thirdBlock.title}
+            description={blockData.thirdBlock.description}
+          />
         </div>
       </div>
     </header>
