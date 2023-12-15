@@ -1,5 +1,4 @@
-import express,{ Router, static as static_} from 'express'
-import path from 'path'
+import { Router, static as static_} from 'express'
 import { GetProductsController } from "./controllers/ProductController";
 
 const appRoutes = Router()

@@ -7,9 +7,10 @@ import path from 'path'
 const app = express()
 
 app.use(cors({
-  origin: 'http://127.0.0.1:3000',
+  origin: 'http://localhost:3000',
   methods: ['GET', 'PUT', 'POST', 'DELETE'] 
 }))
+
 app.use('/', appRoutes);
 app.use('/images', express.static(__dirname + '/images'));
 
