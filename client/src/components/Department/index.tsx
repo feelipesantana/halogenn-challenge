@@ -9,16 +9,19 @@ interface DepartmentProps {
 export function Department({ title, image, description }: DepartmentProps) {
   return (
     <div className={styles.department}>
-      {title}
+      <h3>{title}</h3>
 
-      <div>
-        <Image
-          src={`/assets/icons/${image}.svg`}
-          width={15}
-          height={15}
-          alt="Icon"
-        />
-        {description}
+      <div className={styles.departmentDescription}>
+        <div className={styles.departmentDescriptionContent}>
+          <Image
+            src={`/assets/icons/${image}.svg`}
+            width={23}
+            height={23}
+            alt="Icon"
+          />
+          {description}
+        </div>
+        <Image src="/assets/dots.svg" width={100} height={69} alt="Orçamento" />
       </div>
     </div>
   );

@@ -42,15 +42,35 @@ export function Header() {
               </li>
             </ul>
           </div>
-          <button>
-            <Image
-              src="/assets/icons/list.svg"
-              width={15}
-              height={15}
-              alt="Orçamento"
-            />
-            Orçamento
-          </button>
+          <div className={styles.buttonsHeader}>
+            <button>
+              <Image
+                src="/assets/icons/list.svg"
+                width={21}
+                height={21}
+                alt="Orçamento"
+              />
+
+              <span>Orçamento</span>
+            </button>
+            <button className={styles.menuHamburger}>
+              <Image
+                src="/assets/icons/icon-menu-mobile.svg"
+                width={28}
+                height={28}
+                alt="Orçamento"
+              />
+            </button>
+          </div>
+        </div>
+        <div className={styles.about}>
+          <h2>
+            Qualidade e expertise em produtos <span>químicos e acessórios</span>
+          </h2>
+          <p>
+            Estamos preparados para te entender e atender da melhor forma para
+            suprir todas as suas demandas em químicos e similares.
+          </p>
         </div>
       </div>
     </header>

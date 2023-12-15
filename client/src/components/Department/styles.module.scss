@@ -24,11 +24,43 @@
   }
 
   transition: background 0.2s ease;
-  &:hover{
+  &:nth-child(2){
     background-color: var(--orange-default);
-    color:white;
-    transform: scaleY(1.1);
+    
   }
+  .departmentDescription{
+    
+    image{
+      display:none;
+    }
+  }
+  @media(max-width:728px){
+    height:11.5rem;
+    width:100%;
+    padding:3.5rem 2.8rem;
 
+   
+      
+    h3{
+      display:none;
+    }
+    display:flex;
+    .departmentDescription{
+
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .departmentDescriptionContent{
+        display:flex;
+        gap:2.2rem;
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 1.8rem;
+        color:var(--blue-default)
+      }
+      
+    }
+  }
   
 }

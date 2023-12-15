@@ -14,12 +14,20 @@
 
 :root{
   font-size:62.5%;
-  --blue-default:rgba(50, 51, 81, 1);
   --white:#ffffff;
+
+  --blue-light: rgba(72, 199, 243, 1);
+  --blue-default:rgba(50, 51, 81, 1);
+  
+  --gray-light: rgba(227, 247, 255, 1);
   --gray-dafault: rgba(161, 161, 161, 1);
+
   --longing: rgba(249, 240, 238, 1);
+
   --orange-default: rgba(245, 100, 61, 1);
   --orange-light: rgba(245, 100, 61, 0.8);
+
+  
 
 }
 
