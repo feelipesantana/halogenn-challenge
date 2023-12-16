@@ -3,9 +3,6 @@ import { CreateProductsController, GetProductsController } from "./controllers/P
 
 const appRoutes = Router()
 
-static_( console.log(__dirname)  + '/src/images')
-
-
 appRoutes.get("/products", GetProductsController)
 appRoutes.post("/products", CreateProductsController)
 
