@@ -6,8 +6,13 @@ import Link from "next/link";
 import { Department } from "../Department";
 import { useSelector } from "react-redux";
 import { RootState } from "@/store";
+import { useState } from "react";
+import { ChevronDownIcon } from "lucide-react";
+import { MenuDropDown } from "../MenuDropDown";
 
 export function Header() {
+  const [active, setActive] = useState(false);
+
   const blockData = useSelector((state: RootState) => state.department);
 
   return (
@@ -19,6 +24,7 @@ export function Header() {
         alt="pontos no layout"
         className={styles.layoutDots}
       />
+
       <div className="baseContainer">
         <div className={styles.headerBase}>
           <div className={styles.menuContainer}>
@@ -34,8 +40,19 @@ export function Header() {
               <li>
                 <Link href="/">Início</Link>
               </li>
-              <li>
-                <Link href="/">Produtos</Link>
+              <li
+                onClick={() => setActive(!active)}
+                className="cursor-pointer flex items-center "
+              >
+                Produtos{" "}
+                <ChevronDownIcon
+                  width={15}
+                  height={15}
+                  className={`text-gray-darker ${
+                    active ? "rotate-180 txransform" : ""
+                  } ease-[cubic-bezier(0.87,_0,_0.13,_1)] transition-transform duration-300 group-data-[state=open]:rotate-180`}
+                  aria-hidden
+                />
               </li>
               <li>
                 <Link href="/">Laudos</Link>
@@ -75,6 +92,8 @@ export function Header() {
             </button>
           </div>
         </div>
+        {active && <MenuDropDown />}
+
         <div className={styles.about}>
           <h2>
             Qualidade e expertise em produtos <span>químicos e acessórios</span>

@@ -1,0 +1,16 @@
+.menuDropDown{
+  position: relative;
+  background-color: var(--blue-default);
+  margin-top:4rem;
+  height:37.8rem;
+  z-index: 10;
+  display:flex;
+  gap:6.6rem;
+
+  section{
+    ul{
+      margin-top: 2rem;
+    }
+  }
+  //border border-blue-500 mt-[4rem] h-36 relative z-10
+}
