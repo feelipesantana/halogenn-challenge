@@ -3,9 +3,9 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: "http",
-        hostname: "127.0.0.1",
-        port: "3333",
+        protocol: "https",
+        hostname: "halogenn-api.onrender.com",
+        port: "",
         pathname: "/images/**",
       },
     ],
