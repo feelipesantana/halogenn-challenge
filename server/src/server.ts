@@ -14,7 +14,7 @@ app.use(cors({
 
 app.use(bodyParser.json());
 app.use('/', appRoutes);
-app.use('/images', express.static(__dirname + '/images'));
+app.use('/images', express.static(__dirname + '/'));
 app.listen(3333, () =>{
   console.log('Servidor rodando na porta 3333');
 
