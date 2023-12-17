@@ -4,8 +4,9 @@ import styles from "./styles.module.scss";
 
 interface ProductsProps {
   data: FetchProductsType;
+  isLoading: boolean;
 }
-export function Product({ data }: ProductsProps) {
+export function Product({ data, isLoading }: ProductsProps) {
   return (
     <section className={styles.product}>
       <div className={styles.imgProduct}>

@@ -6,9 +6,12 @@ import { api } from "@/services/api";
 import styles from "@/styles/home.module.scss";
 import { useQuery } from "@tanstack/react-query";
 import { FetchProductsType } from "../../types/FetchProductsType";
+import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
+import { LayoutSkeleton } from "@/components/LayoutSkeleton";
 
 export default function Home() {
-  const { data, error } = useQuery<FetchProductsType[]>({
+  const { data, error, isLoading } = useQuery<FetchProductsType[]>({
     queryKey: ["products"],
     queryFn: getProducts,
   });
@@ -48,9 +51,19 @@ export default function Home() {
           <h2>PRODUTOS</h2>
 
           <div className={styles.productsContent}>
-            {data?.map((res) => {
-              return <Product key={res.id} data={res} />;
-            })}
+            {isLoading ? (
+              <SkeletonTheme baseColor="rgb(75, 85, 99)" highlightColor="#444">
+                <LayoutSkeleton />
+                <LayoutSkeleton />
+                <LayoutSkeleton />
+              </SkeletonTheme>
+            ) : (
+              data?.map((res) => {
+                return (
+                  <Product key={res.id} data={res} isLoading={isLoading} />
+                );
+              })
+            )}
           </div>
         </div>
       </div>
