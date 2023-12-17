@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import styles from "./styles.module.scss";
+import Image from "next/image";
+import { Settings2, Thermometer } from "lucide-react";
 
 export function MenuDropDown() {
   return (
@@ -12,22 +14,79 @@ export function MenuDropDown() {
       }}
       className={styles.menuDropDown}
     >
-      <section>Catálogo completo de itens para você</section>
+      <section>
+        Catálogo completo <br />
+        de itens para você
+      </section>
       <section>
         <h3>Laborátório </h3>
         <ul>
-          <li>Equipamentos</li>
-          <li>Termômetros</li>
-          <li>Acessórios</li>
+          <section>
+            <li>
+              <Settings2 />
+              Equipamentos
+            </li>
+            <li>
+              <Thermometer />
+              Termômetros
+            </li>
+          </section>
+          <section>
+            <li>
+              <Image
+                src="/assets/icons/glass.svg"
+                width={20}
+                height={20}
+                alt="icons"
+              />
+              Acessórios
+            </li>
+          </section>
         </ul>
       </section>
       <section>
         <h3>Utensílios </h3>
         <ul>
-          <li>Inox e Ferragens</li>
-          <li>Vidrarias</li>
-          <li>Plásticos</li>
-          <li>Porcelanas</li>
+          <section>
+            <li>
+              <Image
+                src="/assets/icons/box.svg"
+                width={20}
+                height={20}
+                alt="icons"
+              />
+              Inox e Ferragens
+            </li>
+            <li>
+              <Image
+                src="/assets/icons/box-outline.svg"
+                width={20}
+                height={20}
+                alt="icons"
+              />
+              Plásticos
+            </li>
+          </section>
+          <section>
+            <li>
+              <Image
+                src="/assets/icons/chemistry.svg"
+                width={20}
+                height={20}
+                alt="icons"
+              />
+              Vidrarias
+            </li>
+            <li>
+              <Image
+                src="/assets/icons/bowl.svg"
+                width={20}
+                height={20}
+                alt="icons"
+              />
+              Porcelanas
+            </li>
+          </section>
         </ul>
       </section>
     </motion.div>

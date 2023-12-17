@@ -42,14 +42,16 @@ export function Header() {
               </li>
               <li
                 onClick={() => setActive(!active)}
-                className="cursor-pointer flex items-center "
+                className={`cursor-pointer flex items-center gap-2`}
               >
-                Produtos{" "}
+                <span className={`${active && "text-orange-600"} `}>
+                  Produtos{" "}
+                </span>
                 <ChevronDownIcon
                   width={15}
                   height={15}
                   className={`text-gray-darker ${
-                    active ? "rotate-180 txransform" : ""
+                    active ? "rotate-180 txransform text-orange-600" : ""
                   } ease-[cubic-bezier(0.87,_0,_0.13,_1)] transition-transform duration-300 group-data-[state=open]:rotate-180`}
                   aria-hidden
                 />
