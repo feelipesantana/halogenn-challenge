@@ -1,7 +1,5 @@
 import Image from "next/image";
 import styles from "./styles.module.scss";
-import { useSelector } from "react-redux";
-import { RootState } from "@/store";
 interface DepartmentProps {
   title: string;
   image?: string;
