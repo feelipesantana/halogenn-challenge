@@ -3,17 +3,12 @@
 import Image from "next/image";
 import styles from "./styles.module.scss";
 import Link from "next/link";
-import { Department } from "../Department";
-import { useSelector } from "react-redux";
-import { RootState } from "@/store";
 import { useState } from "react";
 import { ChevronDownIcon } from "lucide-react";
 import { MenuDropDown } from "../MenuDropDown";
 
 export function Header() {
   const [active, setActive] = useState(false);
-
-  const blockData = useSelector((state: RootState) => state.department);
 
   return (
     <header className={styles.headerContainer}>
@@ -82,7 +77,10 @@ export function Header() {
               </div>
               <span>Orçamento</span>
             </button>
-            <button className={styles.menuHamburger}>
+            <button
+              className={styles.menuHamburger}
+              onClick={() => setActive(!active)}
+            >
               <div className="min-h-[2.1rem] min-w-[2.1rem] ">
                 <Image
                   src="/assets/icons/icon-menu-mobile.svg"
@@ -94,6 +92,7 @@ export function Header() {
             </button>
           </div>
         </div>
+
         {active && <MenuDropDown />}
 
         <div className={styles.about}>

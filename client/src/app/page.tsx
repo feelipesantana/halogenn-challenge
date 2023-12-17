@@ -6,12 +6,8 @@ import { api } from "@/services/api";
 import styles from "@/styles/home.module.scss";
 import { useQuery } from "@tanstack/react-query";
 import { FetchProductsType } from "../../types/FetchProductsType";
-import { useSelector } from "react-redux";
-import { RootState } from "@/store";
 
 export default function Home() {
-  const blockData = useSelector((state: RootState) => state.department);
-
   const { data, error } = useQuery<FetchProductsType[]>({
     queryKey: ["products"],
     queryFn: getProducts,
@@ -26,25 +22,24 @@ export default function Home() {
       console.log(error);
     }
   }
-
   return (
     <main className={styles.main}>
       <div className={styles.departmentContainer}>
         <div className={styles.departmentContent}>
           <Department
-            title={blockData.firstBlock.title}
-            description={blockData.firstBlock.description}
-            image={blockData.firstBlock.image}
+            title="PRODUTOS"
+            description="Vidrarias e Equipamentos"
+            image="lab"
           />
           <Department
-            title={blockData.secondBlock.title}
-            description={blockData.secondBlock.description}
-            image={blockData.secondBlock.image}
+            title="QUÍMICOS"
+            description="Materiais Químicos"
+            image="bottle"
           />
           <Department
-            title={blockData.thirdBlock.title}
-            description={blockData.thirdBlock.description}
-            image={blockData.thirdBlock.image}
+            title="LABORATÓRIOS"
+            description="Ferramentas e utensílios"
+            image="tools"
           />
         </div>
       </div>

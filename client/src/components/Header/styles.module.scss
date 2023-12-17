@@ -3,12 +3,14 @@
   padding:5.8rem 4rem;
   background: #313352;
   color:white;
+  position:relative;
   .layoutDots{
     position: absolute;
     right: -10rem;
     top:0;
     width:311px;
     height:343px;
+   
   }
   .headerBase{
     width:100%;
@@ -93,6 +95,7 @@
       }
       
     }
+    
     .about{
       display:block;
       margin-top:10.2rem;

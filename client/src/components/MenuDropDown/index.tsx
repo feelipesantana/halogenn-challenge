@@ -14,81 +14,93 @@ export function MenuDropDown() {
       }}
       className={styles.menuDropDown}
     >
-      <section>
-        Catálogo completo <br />
-        de itens para você
-      </section>
-      <section>
-        <h3>Laborátório </h3>
+      <div className={styles.menuMobile}>
+        <h3>Navegue por nosso site</h3>
         <ul>
-          <section>
-            <li>
-              <Settings2 />
-              Equipamentos
-            </li>
-            <li>
-              <Thermometer />
-              Termômetros
-            </li>
-          </section>
-          <section>
-            <li>
-              <Image
-                src="/assets/icons/glass.svg"
-                width={20}
-                height={20}
-                alt="icons"
-              />
-              Acessórios
-            </li>
-          </section>
+          <li>Início</li>
+          <li>Laudos</li>
+          <li>Sobre nós </li>
+          <li>Certificações</li>
+          <li>Contato</li>{" "}
         </ul>
-      </section>
-      <section>
-        <h3>Utensílios </h3>
-        <ul>
-          <section>
-            <li>
-              <Image
-                src="/assets/icons/box.svg"
-                width={20}
-                height={20}
-                alt="icons"
-              />
-              Inox e Ferragens
-            </li>
-            <li>
-              <Image
-                src="/assets/icons/box-outline.svg"
-                width={20}
-                height={20}
-                alt="icons"
-              />
-              Plásticos
-            </li>
-          </section>
-          <section>
-            <li>
-              <Image
-                src="/assets/icons/chemistry.svg"
-                width={20}
-                height={20}
-                alt="icons"
-              />
-              Vidrarias
-            </li>
-            <li>
-              <Image
-                src="/assets/icons/bowl.svg"
-                width={20}
-                height={20}
-                alt="icons"
-              />
-              Porcelanas
-            </li>
-          </section>
-        </ul>
-      </section>
+      </div>
+      <div className={styles.menuDesk}>
+        <section>
+          Catálogo completo <br />
+          de itens para você
+        </section>
+        <section>
+          <h3>Laborátório </h3>
+          <ul>
+            <section>
+              <li>
+                <Settings2 />
+                Equipamentos
+              </li>
+              <li>
+                <Thermometer />
+                Termômetros
+              </li>
+            </section>
+            <section>
+              <li>
+                <Image
+                  src="/assets/icons/glass.svg"
+                  width={20}
+                  height={20}
+                  alt="icons"
+                />
+                Acessórios
+              </li>
+            </section>
+          </ul>
+        </section>
+        <section>
+          <h3>Utensílios </h3>
+          <ul>
+            <section>
+              <li>
+                <Image
+                  src="/assets/icons/box.svg"
+                  width={20}
+                  height={20}
+                  alt="icons"
+                />
+                Inox e Ferragens
+              </li>
+              <li>
+                <Image
+                  src="/assets/icons/box-outline.svg"
+                  width={20}
+                  height={20}
+                  alt="icons"
+                />
+                Plásticos
+              </li>
+            </section>
+            <section>
+              <li>
+                <Image
+                  src="/assets/icons/chemistry.svg"
+                  width={20}
+                  height={20}
+                  alt="icons"
+                />
+                Vidrarias
+              </li>
+              <li>
+                <Image
+                  src="/assets/icons/bowl.svg"
+                  width={20}
+                  height={20}
+                  alt="icons"
+                />
+                Porcelanas
+              </li>
+            </section>
+          </ul>
+        </section>
+      </div>
     </motion.div>
   );
 }
